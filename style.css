@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap");
+.playground {
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+}
+
+.playground .pregunta {
+  margin: 40px;
+  visibility: hidden;
+}
+
+.playground .pregunta h2 {
+  font-size: 50px;
+  color: red;
+}
+
+.playground .pregunta p {
+  font-size: 25px;
+}
+
+.playground .pregunta input[type=text] {
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.playground .oportunities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(-900px);
+          transform: translateX(-900px);
+}
+
+.playground .oportunities img {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+/*# sourceMappingURL=style.css.map */
