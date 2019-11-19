@@ -21,10 +21,21 @@
     </div>
     <div id="cuestionario" class="cuestionario">
         <div id="pregunta" class="pregunta">
+
             <h2 clas>JUEGO TERMINADO</h2>
             <p id="metodo">Para seguir jugando resuelve el siguiente problema por: <b>{{metodo}}</b></p>
-            <h2>Respuesta: </h2><input id="campoRespuesta" type="text">
-            <button class="validar" id="validar" @click="validarRespuesta">Validar respuesta</button>
+
+            <template v-if="saltadas==4">
+                <h2 class="youLost">Excediste el limite de oportunidades. Da click en el boton para jugar de nuevo.</h2>
+                <div class="btnPlay">
+                    <a href="index.html">Volver a jugar</a>
+                </div>
+            </template>
+            <template v-else>
+                <h2>Respuesta: </h2><input id="campoRespuesta" type="text">
+                <button class="validar" id="validar" @click="validarRespuesta">Validar respuesta</button>
+                <button class="validar" id="saltar" @click="saltarMetodo">Saltar</button>
+            </template>
         </div>
         <div id="mensaje" class="mensaje">
             <div class="correcta" v-if="correcta">

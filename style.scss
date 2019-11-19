@@ -29,6 +29,20 @@ body {
     width: 50%;
     transform: translate(610px, -650px);
     .pregunta {
+        .youLost {
+            font-size: 30px;
+        }
+        .btnPlay {
+            background: blue;
+            font-size: 30px;
+            height: 50px;
+            width: 300px;
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 30px;
+            }
+        }
         margin: 40px;
         .validar {
             font-family: 'Poppins', sans-serif;

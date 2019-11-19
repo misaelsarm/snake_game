@@ -44,6 +44,23 @@ body {
   margin: 40px;
 }
 
+.cuestionario .pregunta .youLost {
+  font-size: 30px;
+}
+
+.cuestionario .pregunta .btnPlay {
+  background: blue;
+  font-size: 30px;
+  height: 50px;
+  width: 300px;
+}
+
+.cuestionario .pregunta .btnPlay a {
+  text-decoration: none;
+  color: white;
+  padding: 30px;
+}
+
 .cuestionario .pregunta .validar {
   font-family: 'Poppins', sans-serif;
   font-size: 25px;

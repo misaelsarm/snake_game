@@ -6,59 +6,142 @@ var vm = new Vue({
         metodos: [
             '1. Interpolacion lineal',
             '2. Interpolacion Lineal',
-            'Newton hacia adelante',
-            'Newton hacia atras',
-            'Newton con diferencias divididas',
-            'Lagrange',
-            'Punto fijo o Sustituciones sucesivas',
-            'Newton - Raphson',
-            'Falsa posicion',
-            'Secante',
-            'Montante',
-            'Gauss - Jordan',
-            'Eliminacion Gaussiana',
-            'Gauss - Seidel',
-            'Jacobi',
-            'Linea Recta',
-            'Regla Trapezoidal',
-            'Newton - Cotes (Abiertas)',
-            'Regla 1/3 Simpson',
-            'Regla de 3/8 Simpson',
-            'Euler hacia adelante',
-            'Euler modificado',
-            'Runge - Kutta de 2° orden',
-            'Runge - Kutta de 3er orden',
-            'Runge - Kutta de 4to orden',
-            'Runge - Kutta de 4to orden por 3/8 de Simpson',
-            'Runge - Kutta de orden superior'
+
+            '3. Newton hacia adelante',
+            '4. Newton hacia adelante',
+
+            '5. Newton hacia atras',
+            '6. Newton hacia atras',
+
+            '7. Newton con diferencias divididas',
+            '8. Newton con diferencias divididas',
+
+            '9. Lagrange',
+            '10. Lagrange',
+
+            '11. Punto fijo o Sustituciones sucesivas',
+            '12. Punto fijo o Sustituciones sucesivas',
+
+            '13. Newton - Raphson',
+
+            '14. Falsa posicion',
+
+            '15. Secante',
+            '16. Secante',
+
+            '17. Montante',
+            '18. Montante',
+
+            '19. Gauss - Jordan',
+            '20. Gauss - Jordan',
+
+            '21. Eliminacion Gaussiana',
+            '22. Eliminacion Gaussiana',
+
+            '23. Gauss - Seidel',
+
+            '24. Jacobi',
+
+            '25. Linea Recta',
+            '26. Linea Recta',
+
+            '27. Regla Trapezoidal',
+            '28. Regla Trapezoidal',
+
+            '29. Newton - Cotes (Abiertas)',
+            '30. Newton - Cotes (Cerradas)',
+
+            '31. Regla 1/3 Simpson',
+            '32. Regla 1/3 Simpson',
+
+            '33. Regla de 3/8 Simpson',
+            '34. Regla de 3/8 Simpson',
+
+            '35. Euler hacia adelante',
+            '36. Euler modificado',
+            '37. Runge - Kutta de 2° orden',
+            '38. Runge - Kutta de 3er orden',
+            '39. Runge - Kutta de 4to orden',
+            '40. Runge - Kutta de 4to orden por 3/8 de Simpson',
+            '41. Runge - Kutta de orden superior'
         ],
         respuestasCorrectas: [
-            'g(x) = 1.304007668',
-            'g(x) = 1.354025101',
-            2.714444444,
-            2.714444444, -1.723076923,
-            2.714444444,
-            "E = 0.000008941",
-            "E = 0.0000001",
-            "E = 0.000527473",
-            "E = 0.00002705181386",
-            "a = 62/87; b = 19/87; c = 66/87",
-            "a = -1; b = 1/2; c = 5/2",
-            "x1 = 1; x2 = 3; x3 = 2",
-            "Ex = 0.000840625; Ey = 0.000417188; Ez = 0.000418438",
-            "Ex = 0.000481445; Ey = 0.000230468; Ez = 0.000757812",
-            "a1 = 0.633695283; a0 = 2.008443615",
-            "I = 0.142416952",
-            ""
+            'g(x) = 1.304007668', //interpolacion lineal
+            'g(x) = 1.354025101', //interpolacion lineal
+
+            2.714444444, //newton hacia adelante
+            3.06777778, //newton hacia adelante
+
+            2.714444444, // newton hacia atras
+            3.06777778, // newton hacia atras
+
+            -1.723076923, -1.809074359, //newton con diferencias divididas
+
+            2.714444444, // lagrange
+            3.06777778, // lagrange
+
+            "E = 0.000008941", // punto fijo
+            "E = 0.000006565", //punto fijo
+
+            "E = 0.0000001", //newton raphson
+
+            "E = 0.000527473", // falsa posicion
+
+            "E = 0.00002705181386", //secante
+            "E = 0.000157823", //secante
+
+            "a = 62/87; b = 19/87; c = 66/87", //montante
+            "x = 21/16; y = 25/16; z = 19/16", //montante
+
+            "a = -1; b = 1/2; c = 5/2", //gauss - jordan
+            "x = 1; y = 0; z = 2 ", //gauss - jordan
+
+            "x1 = 1; x2 = 3; x3 = 2", // elimincion gaussiana
+            "x = 1/3; y = 0; z = 2/3", // elimincion gaussiana
+
+            "Ex = 0.000840625; Ey = 0.000417188; Ez = 0.000418438", // gauss-seidel
+
+            "Ex = 0.000481445; Ey = 0.000230468; Ez = 0.000757812", //jacobi
+
+            "a1 = 0.633695283; a0 = 2.008443615", //linea recta
+            "a1 = 0.374489795; a0 = 0.921122451", //linea recta
+
+            "I = 0.142416952", //Regla trapezoidal
+            "I = 0.662037037", //Rgla trapezoidal
+
+            "-40", //abiertas
+            "3.33297797", //cerradas
+
+            "I = 0.14189715", //1/3 de simpson
+            "I = 0.66666666", //1/3 de simpson
+
+            "I = 0.575583627", //3/8 de simpson
+            "I = 1.647045", //3/8 de simpson
+
+            "y1 = 1.933333333; y2 = 1.995555555", //euler hacia adelante
+
+            "y' = 0.939", //euler modificado
+
+            "k1 = -0.6; k2 = 0.303265329; y1 = 0.651632664", //runge kutta 2 orden
+
+            "k1 = 0.25; k2 = 0.253086419; k3 = 0.257939981; y1 = 1.211723276", //runge kutta 3 orden
+
+            "k1 = 0.053333333; k2 = 0.096759689; k3 = 0.109031713; k4 = 0.2047895890; y1 = 0.511617621", //runge kutta 4 orden
+
+            "k1 = -0.5; k2 = -0.483870959; k3 = -0.428066426; k4 = -0.343547869; y1 = 0.552579997", //runge kutta 4 orden 3/8 simpson
+
+            "k1 = 0.24; m1 = -0.22; k2 = 0.196; m2 = -0.1892; y1 = 1.318; y'1 = 0.9952" //runge kutta orden superior
         ],
+        saltadas: 0,
         temp: 0,
         respuestaCorrecta: "",
         correcta: false,
         incorrecta: false,
+        cancelar: false,
     },
     methods: {
         elegirMetodo: function() {
-            this.numeroMetodo = Math.floor(Math.random() * 5);
+            this.numeroMetodo = Math.floor(Math.random() * 28);
             this.metodos.forEach((element, index) => {
                 if (index == this.numeroMetodo) {
                     this.metodo = element;
@@ -72,10 +155,12 @@ var vm = new Vue({
             this.respuestasCorrectas.forEach((respuesta, indice) => {
                 if (this.temp == indice && inputVal == respuesta) {
                     this.respuestaCorrecta = 1;
+
                 }
             });
             //console.log(this.respuestaCorrecta);
             if (this.respuestaCorrecta == 1) {
+                this.saltadas = 0;
                 console.log("Correcta");
                 setTimeout(function() {
                     game = setInterval(draw, 100);
@@ -94,6 +179,16 @@ var vm = new Vue({
             this.respuestaCorrecta = 0;
             // this.respuestaCorrecta = 0;
         },
+        saltarMetodo: function() {
+            this.numeroMetodo = Math.floor(Math.random() * 28);
+            this.metodos.forEach((element, index) => {
+                if (index == this.numeroMetodo) {
+                    this.metodo = element;
+                    this.temp = index;
+                    return;
+                }
+            });
+        }
 
     }
 
@@ -169,7 +264,14 @@ var vida = document.getElementById("vida1");
 var boton = document.getElementById("validar");
 var mensaje = document.getElementById("mensaje");
 boton.addEventListener("click", function() {
-        mensaje.style.visibility = "visible";
+    mensaje.style.visibility = "visible";
+})
+
+
+var saltar = document.getElementById("saltar");
+saltar.addEventListener('click', function() {
+        vm.saltadas++
+            console.log(vm.saltadas);
     })
     //Funcion principal
 
@@ -238,8 +340,9 @@ function draw() {
                 cuestionario = document.getElementById("cuestionario");
                 cuestionario.style.visibility = 'visible';
                 vm.elegirMetodo();
-                pausa();
+
             } else {
+
                 console.log("cancele");
                 pausa();
             }
