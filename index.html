@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Snake</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="playground">
+    <div id="snakeApp" class="playground">
         <canvas id="snake" width="608" height="608"></canvas>
+        <div class="oportunities">
+            <img id="vida1" src="./img/life.png" alt="">
+            <img id="vida2" src="./img/life.png" alt="">
+            <img id="vida3" src="./img/life.png" alt="">
+        </div>
+    </div>
+    <div id="cuestionario" class="cuestionario">
         <div id="pregunta" class="pregunta">
             <h2 clas>JUEGO TERMINADO</h2>
-            <p>Para seguir jugando resuelve el siguiente problema por: <b>Newton Raphson</b></p>
-            <h2>Respuesta: </h2><input type="text">
+            <p id="metodo">Para seguir jugando resuelve el siguiente problema por: <b>{{metodo}}</b></p>
+            <h2>Respuesta: </h2><input id="campoRespuesta" type="text">
+            <button class="validar" id="validar" @click="validarRespuesta">Validar respuesta</button>
         </div>
-        <div class="oportunities">
-            <img id="life1" src="./img/life.png" alt="">
-            <img id="life2" src="./img/life.png" alt="">
-            <img id="life3" src="./img/life.png" alt="">
+        <div id="mensaje" class="mensaje">
+            <div class="correcta" v-if="correcta">
+                <h2>Respuesta correcta</h2>
+            </div>
+            <div v-else class="incorrecta">
+                <h2>Respuesta incorrecta</h2>
+            </div>
         </div>
-
     </div>
 
 </body>

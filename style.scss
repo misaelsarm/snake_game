@@ -1,32 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .playground {
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     overflow: hidden;
+    .oportunities {
+        display: flex;
+        transform: translateX(-250px);
+        img {
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.cuestionario {
+    visibility: hidden;
+    font-family: 'Poppins', sans-serif;
+    //background: yellow;
+    position: absolute;
+    width: 50%;
+    transform: translate(610px, -650px);
     .pregunta {
+        margin: 40px;
+        .validar {
+            font-family: 'Poppins', sans-serif;
+            font-size: 25px;
+            padding: 15px;
+            background: #6BBAEC;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
         h2 {
+            margin-bottom: 20px;
             font-size: 50px;
             color: red;
         }
         p {
             font-size: 25px;
         }
-        margin: 40px;
-        visibility: hidden;
         input[type=text] {
             font-family: 'Poppins', sans-serif;
             padding: 15px;
             font-size: 25px;
+            width: 400px;
         }
     }
-    .oportunities {
-        display: flex;
-        transform: translateX(-900px);
-        img {
-            margin: 10px;
-            width: 50px;
-            height: 50px;
+    .mensaje {
+        margin-left: 40px;
+        visibility: hidden;
+        h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+        .correcta {
+            background: green;
+            height: 65px;
+        }
+        .incorrecta {
+            height: 65px;
+            background: red;
         }
     }
 }
