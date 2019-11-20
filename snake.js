@@ -97,7 +97,7 @@ var vm = new Vue({
             "x = 1; y = 0; z = 2 ", //gauss - jordan
 
             "x1 = 1; x2 = 3; x3 = 2", // elimincion gaussiana
-            "x = 1/3; y = 0; z = 2/3", // elimincion gaussiana
+            "x = -1/3; y = 0; z = 2/3", // elimincion gaussiana
 
             "Ex = 0.000840625; Ey = 0.000417188; Ez = 0.000418438", // gauss-seidel
 
@@ -138,6 +138,7 @@ var vm = new Vue({
         correcta: false,
         incorrecta: false,
         cancelar: false,
+        source: './img/problemas/1.png'
     },
     methods: {
         elegirMetodo: function() {
@@ -146,6 +147,7 @@ var vm = new Vue({
                 if (index == this.numeroMetodo) {
                     this.metodo = element;
                     this.temp = index;
+                    this.source = './img/problemas/' + (index + 1) + '.png';
                     return;
                 }
             });
@@ -185,9 +187,32 @@ var vm = new Vue({
                 if (index == this.numeroMetodo) {
                     this.metodo = element;
                     this.temp = index;
+                    this.source = './img/problemas/' + (index + 1) + '.png';
                     return;
                 }
             });
+        },
+        timer: function(duration, display) {
+            var timer = duration,
+                minutes, seconds;
+            setInterval(function() {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        },
+        start: function() {
+            var fiveMinutes = 60 * 30, //30 minutos
+                display = document.querySelector('#time');
+            this.timer(fiveMinutes, display);
         }
 
     }
@@ -340,9 +365,11 @@ function draw() {
                 cuestionario = document.getElementById("cuestionario");
                 cuestionario.style.visibility = 'visible';
                 vm.elegirMetodo();
+                vm.start();
 
             } else {
-
+                vm.cancelar = true;
+                console.log(vm.cancelar);
                 console.log("cancele");
                 pausa();
             }

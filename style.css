@@ -32,6 +32,7 @@ body {
 }
 
 .cuestionario {
+  margin-top: 20px;
   visibility: hidden;
   font-family: 'Poppins', sans-serif;
   position: absolute;
@@ -41,16 +42,27 @@ body {
 }
 
 .cuestionario .pregunta {
-  margin: 40px;
+  margin-left: 20px;
+}
+
+.cuestionario .pregunta .timer {
+  font-size: 30px;
+  color: black;
+  -webkit-transform: translate(45px, -80px);
+          transform: translate(45px, -80px);
+}
+
+.cuestionario .pregunta .timer #time {
+  color: red;
 }
 
 .cuestionario .pregunta .youLost {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .cuestionario .pregunta .btnPlay {
   background: blue;
-  font-size: 30px;
+  font-size: 20px;
   height: 50px;
   width: 300px;
 }
@@ -58,7 +70,6 @@ body {
 .cuestionario .pregunta .btnPlay a {
   text-decoration: none;
   color: white;
-  padding: 30px;
 }
 
 .cuestionario .pregunta .validar {
@@ -72,19 +83,20 @@ body {
 }
 
 .cuestionario .pregunta h2 {
-  margin-bottom: 20px;
-  font-size: 50px;
+  margin-bottom: 0;
+  font-size: 30px;
   color: red;
 }
 
 .cuestionario .pregunta p {
   font-size: 25px;
+  margin: 0;
 }
 
 .cuestionario .pregunta input[type=text] {
   font-family: 'Poppins', sans-serif;
-  padding: 15px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 20px;
   width: 400px;
 }
 

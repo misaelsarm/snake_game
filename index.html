@@ -21,10 +21,18 @@
     </div>
     <div id="cuestionario" class="cuestionario">
         <div id="pregunta" class="pregunta">
-
-            <h2 clas>JUEGO TERMINADO</h2>
-            <p id="metodo">Para seguir jugando resuelve el siguiente problema por: <b>{{metodo}}</b></p>
-
+            <template v-if="cancelar==true">
+                <h2 clas>JUEGO TERMINADO</h2>
+                <div class="btnPlay">
+                    <a href="index.html">Volver a jugar</a>
+                </div>
+            </template>
+            <template v-else>
+                <h2 clas>JUEGO TERMINADO</h2>
+                <p id="metodo">Para seguir jugando resuelve el siguiente problema por: <b>{{metodo}}</b></p>
+                <img :src="source" alt="">
+                        <b><p>Tiempo restante: <span id="time">30:00</span></p></b>
+            </template>
             <template v-if="saltadas==4">
                 <h2 class="youLost">Excediste el limite de oportunidades. Da click en el boton para jugar de nuevo.</h2>
                 <div class="btnPlay">
@@ -45,6 +53,7 @@
                 <h2>Respuesta incorrecta</h2>
             </div>
         </div>
+
     </div>
 
 </body>

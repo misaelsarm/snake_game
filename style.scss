@@ -22,6 +22,7 @@ body {
 }
 
 .cuestionario {
+    margin-top: 20px;
     visibility: hidden;
     font-family: 'Poppins', sans-serif;
     //background: yellow;
@@ -29,21 +30,29 @@ body {
     width: 50%;
     transform: translate(610px, -650px);
     .pregunta {
-        .youLost {
+        .timer {
             font-size: 30px;
+            color: black;
+            transform: translate(45px, -80px);
+            #time {
+                color: red;
+            }
+        }
+        margin-left: 20px;
+        .youLost {
+            font-size: 20px;
         }
         .btnPlay {
             background: blue;
-            font-size: 30px;
+            font-size: 20px;
             height: 50px;
             width: 300px;
             a {
                 text-decoration: none;
                 color: white;
-                padding: 30px;
+                //padding: 30px;
             }
         }
-        margin: 40px;
         .validar {
             font-family: 'Poppins', sans-serif;
             font-size: 25px;
@@ -54,17 +63,18 @@ body {
             cursor: pointer;
         }
         h2 {
-            margin-bottom: 20px;
-            font-size: 50px;
+            margin-bottom: 0;
+            font-size: 30px;
             color: red;
         }
         p {
             font-size: 25px;
+            margin: 0;
         }
         input[type=text] {
             font-family: 'Poppins', sans-serif;
-            padding: 15px;
-            font-size: 25px;
+            padding: 10px;
+            font-size: 20px;
             width: 400px;
         }
     }
