@@ -63,7 +63,14 @@ var vm = new Vue({
             '38. Runge - Kutta de 3er orden',
             '39. Runge - Kutta de 4to orden',
             '40. Runge - Kutta de 4to orden por 3/8 de Simpson',
-            '41. Runge - Kutta de orden superior'
+            '41. Runge - Kutta de orden superior',
+
+            '42. Lineal con funcion',
+            '43. Cuadratica',
+            '44. Cubica',
+            '45. Cuadratica con funcion',
+
+            '46. Euler hacia atras'
         ],
         respuestasCorrectas: [
             'g(x) = 1.304007668', //interpolacion lineal
@@ -130,7 +137,15 @@ var vm = new Vue({
 
             "k1 = -0.5; k2 = -0.483870959; k3 = -0.428066426; k4 = -0.343547869; y1 = 0.552579997", //runge kutta 4 orden 3/8 simpson
 
-            "k1 = 0.24; m1 = -0.22; k2 = 0.196; m2 = -0.1892; y1 = 1.318; y'1 = 0.9952" //runge kutta orden superior
+            "k1 = 0.24; m1 = -0.22; k2 = 0.196; m2 = -0.1892; y1 = 1.318; y'1 = 0.9952", //runge kutta orden superior
+            "a1 = 2.705508427; a2 = 0.921122451; a0 = 0.921122451", //lineal con funcion
+
+            "a1 = 0.921122451; a2 = 2.705508427; a0 = 0.921122451", //cuadratica
+
+            "a1 = 0.633695283; a2 = 2.008443615; a3 = 5.050180975; a0 = 0.921122451", //cubica
+
+            "a1 = 0.921122451; a2 = 5.050180975; a3 = 2.008443615; a0 = 0.633695283", //cuadratica con funcion
+            ""
         ],
         saltadas: 0,
         temp: 0,
@@ -142,7 +157,7 @@ var vm = new Vue({
     },
     methods: {
         elegirMetodo: function() {
-            this.numeroMetodo = Math.floor(Math.random() * 28);
+            this.numeroMetodo = Math.floor(Math.random() * 42);
             this.metodos.forEach((element, index) => {
                 if (index == this.numeroMetodo) {
                     this.metodo = element;

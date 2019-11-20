@@ -29,12 +29,12 @@
             </template>
             <template v-else>
                 <h2 clas>JUEGO TERMINADO</h2>
-                <p id="metodo">Para seguir jugando resuelve el siguiente problema por: <b>{{metodo}}</b></p>
+                <p id="metodo">Para seguir jugando resuelve el siguiente problema por: <b>{{metodo}}</b></p> <br>
                 <img :src="source" alt="">
-                        <b><p>Tiempo restante: <span id="time">30:00</span></p></b>
+                      <!-- ****tiempo**** -->  <b><p class="timer">Tiempo restante: <span id="time">30:00</span></p></b>
             </template>
             <template v-if="saltadas==4">
-                <h2 class="youLost">Excediste el limite de oportunidades. Da click en el boton para jugar de nuevo.</h2>
+                <h2 class="youLost">Excediste el límite de oportunidades. Da click en el botón para jugar de nuevo.</h2>
                 <div class="btnPlay">
                     <a href="index.html">Volver a jugar</a>
                 </div>

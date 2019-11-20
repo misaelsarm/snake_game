@@ -22,7 +22,8 @@ body {
 }
 
 .cuestionario {
-    margin-top: 20px;
+    //background: blue;
+    margin-top: 50px;
     visibility: hidden;
     font-family: 'Poppins', sans-serif;
     //background: yellow;
@@ -30,10 +31,13 @@ body {
     width: 50%;
     transform: translate(610px, -650px);
     .pregunta {
+        #metodo {
+            font-size: 20px;
+        }
         .timer {
-            font-size: 30px;
+            font-size: 25px;
             color: black;
-            transform: translate(45px, -80px);
+            transform: translate(0px, 10px);
             #time {
                 color: red;
             }
@@ -47,6 +51,7 @@ body {
             font-size: 20px;
             height: 50px;
             width: 300px;
+            margin-bottom: 20px;
             a {
                 text-decoration: none;
                 color: white;
@@ -55,10 +60,11 @@ body {
         }
         .validar {
             font-family: 'Poppins', sans-serif;
-            font-size: 25px;
+            font-size: 20px;
             padding: 15px;
             background: #6BBAEC;
             margin-top: 10px;
+            margin-bottom: 20px;
             border: none;
             cursor: pointer;
         }
@@ -75,15 +81,17 @@ body {
             font-family: 'Poppins', sans-serif;
             padding: 10px;
             font-size: 20px;
-            width: 400px;
+            width: 500px;
         }
     }
     .mensaje {
-        margin-left: 40px;
+        display: flex;
+        margin-left: 20px;
         visibility: hidden;
         h2 {
-            font-size: 40px;
+            font-size: 20px;
             text-align: center;
+            width: 300px;
         }
         .correcta {
             background: green;
